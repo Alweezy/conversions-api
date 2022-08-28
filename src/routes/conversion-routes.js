@@ -1,7 +1,6 @@
 'use strict'
 
 const express = require('express');
-const { parseInt } = require('lodash');
 const conversionsHandler = require('./../handlers/conversions-handler')
 const router = express.Router();
 
