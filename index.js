@@ -5,9 +5,11 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT;
 
+const conversionsRoutes = require('./src/routes/conversion-routes');
 
 app.use(cors());
 app.use(morgan('combined'));
+app.use('/api/v1/conversions/', conversionsRoutes);
 
 app.get('/test', (req, res) => {
   res.send({status: "up and running ..."})
