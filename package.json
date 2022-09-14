@@ -4,7 +4,7 @@
   "description": "A simple light weight measurement conversions server",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/test/*.js",
+    "test": "mocha src/test/*.js --reporter mochawesome --reporter-options reportDir=test-results, reportFilename=test-results",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
@@ -23,6 +23,7 @@
     "convert-units": "^2.3.4",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "mochawesome": "^7.1.3",
     "morgan": "^1.10.0",
     "prettier": "^2.7.1"
   },

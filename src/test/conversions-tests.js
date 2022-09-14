@@ -1,4 +1,5 @@
 const conversionsionsHandler = require('./../handlers/conversions-handler');
+const mocha = require('mocha')
 const expect = require('chai').expect;
 
 
@@ -8,20 +9,20 @@ describe('conversions', async () => {
   const { outPutValue: speed } = await conversionsionsHandler.convertUnit(100, 'm/s', 'km/h')
   const { outPutValue: temperature } = await conversionsionsHandler.convertUnit(10, 'C', 'F')
 
-  context('correct length arguments', () => {
-    it('shoud return correct length conversion', () => {
+  mocha.describe('correct length arguments', () => {
+    mocha.it('should return correct length conversion', () => {
       expect(length).to.equal(6000)
     })
   })
 
-  context('correct speed arguments', () => {
-    it('shoud return correct speed conversion', () => {
+  mocha.describe('correct speed arguments', () => {
+    mocha.it('should return correct speed conversion', () => {
       expect(speed).to.equal(360)
     })
   })
 
-  context('correct temperature arguments', () => {
-    it('shoud return correct speed conversion', () => {
+  mocha.describe('correct temperature arguments', () => {
+    mocha.it('should return correct speed conversion', () => {
       expect(temperature).to.equal(50)
     })
   })
